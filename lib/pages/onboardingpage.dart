@@ -93,7 +93,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
                   backgroundColor: const Color(0xFF53B175),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 child: Text(
