@@ -24,8 +24,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 600,
-          left: 110,
+          top: 620, //620
+          left: 115, //115
           child: Text(
             'Welcome',
             // textAlign: TextAlign.center,
@@ -40,8 +40,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 660,
-          right: 109,
+          top: 685, //685
+          right: 100, //100
           child: Text(
             "to our store",
             style: TextStyle(
@@ -55,8 +55,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 740,
-          left: 80,
+          top: 755, //755
+          left: 80, //80
           // height: 15,
           child: Text(
             "Get your groceries in as fast as one hour",
@@ -76,7 +76,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
           alignment: Alignment.bottomCenter,
           child: Padding(
             padding: EdgeInsets.only(
-              bottom: 140,
+              bottom: 105, //105
             ), //this help to move button upward direction
             child: SizedBox(
               height: 65,
