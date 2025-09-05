@@ -19,12 +19,12 @@ class _OnboardingpageState extends State<Onboardingpage> {
 
         Positioned(
           top: 540,
-          left: 190,
+          left: 195,
           child: Image.asset("assets/images/Group.png", height: 60, width: 60),
         ),
 
         Positioned(
-          top: 620, //620
+          top: 630, //630
           left: 115, //115
           child: Text(
             'Welcome',
@@ -40,7 +40,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 685, //685
+          top: 695, //690
           right: 100, //100
           child: Text(
             "to our store",
@@ -55,7 +55,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 755, //755
+          top: 765, //765
           left: 80, //80
           // height: 15,
           child: Text(
