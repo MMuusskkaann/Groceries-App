@@ -19,13 +19,13 @@ class _OnboardingpageState extends State<Onboardingpage> {
 
         Positioned(
           top: 540,
-          left: 200,
+          left: 190,
           child: Image.asset("assets/images/Group.png", height: 60, width: 60),
         ),
 
         Positioned(
-          top: 620,
-          left: 130,
+          top: 600,
+          left: 110,
           child: Text(
             'Welcome',
             // textAlign: TextAlign.center,
@@ -40,8 +40,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 680,
-          right: 95,
+          top: 660,
+          right: 109,
           child: Text(
             "to our store",
             style: TextStyle(
@@ -55,7 +55,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 750,
+          top: 740,
           left: 80,
           // height: 15,
           child: Text(
@@ -76,10 +76,10 @@ class _OnboardingpageState extends State<Onboardingpage> {
           alignment: Alignment.bottomCenter,
           child: Padding(
             padding: EdgeInsets.only(
-              bottom: 90,
+              bottom: 140,
             ), //this help to move button upward direction
             child: SizedBox(
-              height: 90,
+              height: 65,
               width: 370,
               child: ElevatedButton(
                 onPressed: () {
@@ -96,13 +96,16 @@ class _OnboardingpageState extends State<Onboardingpage> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                child: Text(
-                  "Get Started",
-                  style: TextStyle(
-                    fontFamily: "Gilroy",
-                    fontWeight: FontWeight.w600,
-                    fontSize: 20,
-                    height: 4,
+                child: Center(
+                  child: Text(
+                    "Get Started",
+                    style: TextStyle(
+                      fontFamily: "Gilroy",
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20,
+                      height: 3,
+
+                    ),
                   ),
                 ),
               ),

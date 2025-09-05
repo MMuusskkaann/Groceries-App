@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceriesapp/pages/numberpage.dart';
 
 class Signinpage extends StatefulWidget {
   const Signinpage({super.key});
@@ -73,15 +74,13 @@ class _SigninpageState extends State<Signinpage> {
                           horizontal: 12,
                           vertical: 16,
                         ),
-                        decoration: BoxDecoration(color: Colors.white),
                         child: Text("+91"),
                       ),
-
-                      SizedBox(width: 0),
-                      Expanded(
+                      SizedBox(width: 8),
+                      Container(
+                        width: 290,
                         child: TextField(
-                          keyboardType: TextInputType.phone,
-                          textInputAction: TextInputAction.done,
+                          keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -126,7 +125,7 @@ class _SigninpageState extends State<Signinpage> {
                       padding: EdgeInsets.only(
                         bottom: 20,
                         // left: 10,
-                        right: 10
+                        right: 10,
                       ), //this help to move button upward direction
                       child: SizedBox(
                         height: 65,
@@ -149,16 +148,14 @@ class _SigninpageState extends State<Signinpage> {
                           // icon: Icon(Icons.g),
                           label: Center(
                             child: Padding(
-                              padding: const EdgeInsets.only(
-                                bottom: 1.0,
-                              ),
+                              padding: const EdgeInsets.only(bottom: 1.0),
                               child: Text(
-                                "Get Started",
+                                "Continue with Google",
                                 style: TextStyle(
                                   fontFamily: "Gilroy",
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
-                                  height: 4,
+                                  height: 3,
                                 ),
                               ),
                             ),
@@ -171,22 +168,24 @@ class _SigninpageState extends State<Signinpage> {
                   // SizedBox(height: 2),
                   Align(
                     alignment: Alignment.bottomCenter,
-                      child:Padding(
-                        padding: EdgeInsets.only(
-                          // bottom: 20,
-                          left: 0,
-                          right: 10,
-                        ),
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        // bottom: 20,
+                        left: 0,
+                        right: 10,
+                      ),
 
                       child: SizedBox(
                         height: 65,
                         width: 375,
                         child: ElevatedButton(
                           onPressed: () {
-                            // Navigator.push(
-                              // context,
-                              // MaterialPageRoute(builder: (context) => Signinpage()),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Numberpage(),
+                              ),
+                            );
                           },
 
                           style: ElevatedButton.styleFrom(
@@ -198,12 +197,12 @@ class _SigninpageState extends State<Signinpage> {
                           ),
                           child: Center(
                             child: Text(
-                              "Get Started",
+                              "Continue with Facebook",
                               style: TextStyle(
                                 fontFamily: "Gilroy",
                                 fontWeight: FontWeight.w600,
                                 fontSize: 20,
-                                height: 4,
+                                height: 3,
                               ),
                             ),
                           ),
@@ -216,8 +215,6 @@ class _SigninpageState extends State<Signinpage> {
             ),
           ),
         ],
-
-
       ),
     );
   }
