@@ -18,59 +18,63 @@ class _NumberpageState extends State<Numberpage> {
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
       ),
 
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Stack(
         children: [
-          Container(
-            padding: EdgeInsets.only(left: 25.0),
-            child: Text(
-              "Enter your mobile number",
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.w600,
-                fontFamily: "Gilroy",
-                height: 4,
-              ),
-            ),
-          ),
-          SizedBox(height: 4),
-          Container(
-            padding: EdgeInsets.only(left: 25.0),
-            child: Text(
-              "Mobile Number",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                fontFamily: "Gilroy",
-                color: Colors.grey,
-                // height: 2,
-              ),
-            ),
-          ),
-          SizedBox(height: 4),
-          Row(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-                child: Text("+91"),
-              ),
-              SizedBox(width: 8),
-              Container(
-                width: 300,
-                child: TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey, width: 1.5),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey, width: 1.5),
-                    ),
+                padding: EdgeInsets.only(left: 25.0),
+                child: Text(
+                  "Enter your mobile number",
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: "Gilroy",
+                    height: 4,
                   ),
                 ),
               ),
+              SizedBox(height: 4),
+              Container(
+                padding: EdgeInsets.only(left: 25.0),
+                child: Text(
+                  "Mobile Number",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: "Gilroy",
+                    color: Colors.grey,
+                    height: 2,
+                  ),
+                ),
+              ),
+              SizedBox(height: 4),
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                    child: Text("+91"),
+                  ),
+                  SizedBox(width: 8),
+                  Container(
+                    width: 300,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey, width: 1.5),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey, width: 1.5),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
             ],
           ),
-
         ],
       ),
 
