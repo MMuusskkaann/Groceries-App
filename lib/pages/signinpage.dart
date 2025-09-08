@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_intl_phone_field/flutter_intl_phone_field.dart';
 import 'package:groceriesapp/pages/numberpage.dart';
 
 class Signinpage extends StatefulWidget {
@@ -66,41 +67,29 @@ class _SigninpageState extends State<Signinpage> {
                     ),
                   ),
 
-                  SizedBox(height: 15),
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 16,
-                        ),
-                        child: Text("+91"),
+                  SizedBox(height: 20),
+                  IntlPhoneField(
+                    initialCountryCode: 'IN',
+                    style: TextStyle(fontSize: 19),
+                    onChanged: (phone) {
+                      // print(phone.completeNumber);
+                    },
+                    decoration: InputDecoration(
+                      // labelText: 'Phone Number',
+                      counterText: '',
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey), // default border color
                       ),
-                      SizedBox(width: 8),
-                      Container(
-                        width: 290,
-                        child: TextField(
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.grey,
-                                width: 1.5,
-                              ),
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.grey,
-                                width: 1.5,
-                              ),
-                            ),
-                          ),
-                        ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey), // bottom line color
                       ),
-                    ],
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey), // bottom line color on focus
+                      ),
+                    ),
                   ),
 
-                  SizedBox(height: 40),
+                  SizedBox(height: 30),
 
                   Center(
                     child: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_intl_phone_field/flutter_intl_phone_field.dart';
 import 'package:groceriesapp/pages/verificationpage.dart';
 
 class Numberpage extends StatefulWidget {
@@ -12,14 +13,17 @@ class _NumberpageState extends State<Numberpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
-      ),
+      // backgroundColor: Colors.white,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
+      // ),
 
       body: Stack(
         children: [
+          Positioned.fill(
+            child: Image.asset("assets/images/Rectangle.png", fit: BoxFit.cover),
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -50,27 +54,24 @@ class _NumberpageState extends State<Numberpage> {
                 ),
               ),
               SizedBox(height: 4),
-              Row(
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-                    child: Text("+91"),
+              IntlPhoneField(
+                initialCountryCode: 'IN',
+                onChanged: (phone) {
+                  // print(phone.completeNumber);
+                },
+                decoration: InputDecoration(
+                  // labelText: 'Phone Number',
+                  counterText: '',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey), // default border color
                   ),
-                  SizedBox(width: 8),
-                  Container(
-                    width: 300,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey, width: 1.5),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey, width: 1.5),
-                        ),
-                      ),
-                    ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey), // bottom line color
                   ),
-                ],
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey), // bottom line color on focus
+                  ),
+                ),
               ),
 
             ],
