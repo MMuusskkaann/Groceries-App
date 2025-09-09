@@ -68,23 +68,29 @@ class _SigninpageState extends State<Signinpage> {
                   ),
 
                   SizedBox(height: 20),
-                  IntlPhoneField(
-                    initialCountryCode: 'IN',
-                    style: TextStyle(fontSize: 19),
-                    onChanged: (phone) {
-                      // print(phone.completeNumber);
-                    },
-                    decoration: InputDecoration(
-                      // labelText: 'Phone Number',
-                      counterText: '',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey), // default border color
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey), // bottom line color
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey), // bottom line color on focus
+                  Container(
+                    width: 350,
+                    child: IntlPhoneField(
+                      initialCountryCode: 'IN',
+                      showDropdownIcon: false,
+                      showCountryFlag: true,
+                      style: TextStyle(fontSize: 19),
+                      onChanged: (phone) {
+                        // print(phone.completeNumber);
+                      },
+                      decoration: InputDecoration(
+                        // labelText: 'Phone Number',
+                        counterText: '',
+
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey), // default border color
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey), // bottom line color
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey), // bottom line color on focus
+                        ),
                       ),
                     ),
                   ),
