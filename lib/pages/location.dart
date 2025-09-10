@@ -22,6 +22,17 @@ class _locationPageState extends State<locationPage> {
               fit: BoxFit.cover,
             ),
           ),
+
+          Positioned(
+            top: 60,
+            left: 17,
+            child: IconButton(
+              icon: Icon(Icons.arrow_back_ios),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ),
         ],
       ),
     );

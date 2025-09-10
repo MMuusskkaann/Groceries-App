@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:groceriesapp/pages/location.dart';
-import 'package:pin_code/pin_code.dart' hide PinCodeFieldShape;
 import 'package:pin_code_fields/pin_code_fields.dart'
     show PinCodeTextField, AnimationType, PinTheme, PinCodeFieldShape;
 
@@ -79,7 +78,7 @@ class _VerificationpageState extends State<Verificationpage> {
                       Padding(
                         padding: const EdgeInsets.only(left: 16.0),
                         child: SizedBox(
-                          width: 400, // 👈 fixed width for whole OTP row
+                          width: 400, // fixed width for whole OTP row
                           child: PinCodeTextField(
                             appContext: context,
                             length: 4,
@@ -89,23 +88,41 @@ class _VerificationpageState extends State<Verificationpage> {
                               shape: PinCodeFieldShape.underline,
                               borderRadius: BorderRadius.zero,
                               fieldHeight: 55,
-                              fieldWidth: 40,  // har field ki width
+                              fieldWidth: 40, // width of each field
                               activeColor: Colors.grey,
                               inactiveColor: Colors.grey,
                               selectedColor: Colors.grey,
                             ),
                             enableActiveFill: false,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // evenly distribute within 220
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             onChanged: (value) {
                               print(value);
                             },
                             onCompleted: (value) {
                               print("Completed: $value");
+
+                              // Show dialog box
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text("OTP Entered"),
+                                  // content: Text("You entered: $value"),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(
+                                          context,
+                                        ).pop(); // close the dialog
+                                      },
+                                      child: Text("OK"),
+                                    ),
+                                  ],
+                                ),
+                              );
                             },
                           ),
                         ),
-                      )
-
+                      ),
                     ],
                   ),
                 ),

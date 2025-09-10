@@ -67,6 +67,7 @@ flutter:
     - assets/images/Group.png
     - assets/images/maskgroup.png
     - assets/images/Rectangle.png
+    - assets/images/location.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
