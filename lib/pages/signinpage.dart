@@ -69,7 +69,7 @@ class _SigninpageState extends State<Signinpage> {
 
                   SizedBox(height: 20),
                   Container(
-                    width: 350,
+                    width: 390,
                     child: IntlPhoneField(
                       initialCountryCode: 'IN',
                       showDropdownIcon: false,

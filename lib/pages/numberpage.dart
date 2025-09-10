@@ -16,8 +16,8 @@ class _NumberpageState extends State<Numberpage> {
       body: Stack(
         children: [
           Container(color: Colors.white70),
-
           Positioned(
+            width: 450,
             child: Image.asset(
               "assets/images/Rectangle.png",
               fit: BoxFit.cover,
@@ -25,8 +25,8 @@ class _NumberpageState extends State<Numberpage> {
           ),
 
           Positioned(
-            top: 50,
-            left: 15,
+            top: 60,
+            left: 17,
             child: IconButton(
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () {
@@ -35,11 +35,10 @@ class _NumberpageState extends State<Numberpage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 140),
             child: Column(
               children: [
                 Positioned(
-                  top: 40,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -74,9 +73,9 @@ class _NumberpageState extends State<Numberpage> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.only(left: 19.0),
+                        padding: const EdgeInsets.only(left: 20.0),
                         child: Container(
-                          width: 370,
+                          width: 405,
                           child: IntlPhoneField(
                             initialCountryCode: 'IN',
                             showCountryFlag: true,
@@ -92,7 +91,7 @@ class _NumberpageState extends State<Numberpage> {
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Colors.grey,
-                                  width: 2.0,
+                                  width: 1.0,
                                 ), // bottom line color
                               ),
                               focusedBorder: UnderlineInputBorder(

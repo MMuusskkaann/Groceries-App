@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_intl_phone_field/flutter_intl_phone_field.dart';
+import 'package:groceriesapp/pages/location.dart';
+import 'package:pin_code/pin_code.dart' hide PinCodeFieldShape;
+import 'package:pin_code_fields/pin_code_fields.dart'
+    show PinCodeTextField, AnimationType, PinTheme, PinCodeFieldShape;
 
 class Verificationpage extends StatefulWidget {
   const Verificationpage({super.key});
@@ -17,6 +20,7 @@ class _VerificationpageState extends State<Verificationpage> {
           Container(color: Colors.white70),
 
           Positioned(
+            width: 450,
             child: Image.asset(
               "assets/images/Rectangle.png",
               fit: BoxFit.cover,
@@ -24,8 +28,8 @@ class _VerificationpageState extends State<Verificationpage> {
           ),
 
           Positioned(
-            top: 50,
-            left: 15,
+            top: 60,
+            left: 17,
             child: IconButton(
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () {
@@ -34,7 +38,7 @@ class _VerificationpageState extends State<Verificationpage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 140),
             child: Column(
               children: [
                 Positioned(
@@ -45,7 +49,7 @@ class _VerificationpageState extends State<Verificationpage> {
                       Container(
                         padding: EdgeInsets.only(left: 25.0),
                         child: Text(
-                          "Enter your mobile number",
+                          "Enter your 4-digit code",
                           style: TextStyle(
                             fontSize: 26,
                             fontWeight: FontWeight.w600,
@@ -60,7 +64,7 @@ class _VerificationpageState extends State<Verificationpage> {
                         child: Container(
                           padding: EdgeInsets.only(top: 0, left: 25.0),
                           child: Text(
-                            "Mobile Number",
+                            "Code",
                             style: TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.w600,
@@ -73,37 +77,35 @@ class _VerificationpageState extends State<Verificationpage> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.only(left: 19.0),
-                        child: Container(
-                          width: 370,
-                          child: IntlPhoneField(
-                            initialCountryCode: 'IN',
-                            showCountryFlag: true,
-                            showDropdownIcon: false,
-                            disableLengthCheck: true,
-                            style: TextStyle(fontSize: 19),
-                            onChanged: (phone) {
-                              // print(phone.completeNumber);
-                            },
-                            decoration: InputDecoration(
-                              // labelText: 'Phone Number',
-                              counterText: '',
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.grey,
-                                  width: 2.0,
-                                ), // bottom line color
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.grey,
-                                  width: 2.5,
-                                ), // bottom line color on focus
-                              ),
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: SizedBox(
+                          width: 400, // 👈 fixed width for whole OTP row
+                          child: PinCodeTextField(
+                            appContext: context,
+                            length: 4,
+                            keyboardType: TextInputType.number,
+                            animationType: AnimationType.none,
+                            pinTheme: PinTheme(
+                              shape: PinCodeFieldShape.underline,
+                              borderRadius: BorderRadius.zero,
+                              fieldHeight: 55,
+                              fieldWidth: 40,  // har field ki width
+                              activeColor: Colors.grey,
+                              inactiveColor: Colors.grey,
+                              selectedColor: Colors.grey,
                             ),
+                            enableActiveFill: false,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // evenly distribute within 220
+                            onChanged: (value) {
+                              print(value);
+                            },
+                            onCompleted: (value) {
+                              print("Completed: $value");
+                            },
                           ),
                         ),
-                      ),
+                      )
+
                     ],
                   ),
                 ),
@@ -111,6 +113,23 @@ class _VerificationpageState extends State<Verificationpage> {
             ),
           ),
         ],
+      ),
+
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: SizedBox(
+          width: double.infinity,
+          height: 50,
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => locationPage()),
+              );
+            },
+            child: Text("Next"),
+          ),
+        ),
       ),
     );
   }
