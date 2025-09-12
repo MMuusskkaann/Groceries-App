@@ -41,7 +41,7 @@ class _locationPageState extends State<locationPage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 140, left: 110),
+            padding: const EdgeInsets.only(top: 140, left: 90),
             child: SizedBox(
               child: Positioned(
                 top: 150,
@@ -54,8 +54,8 @@ class _locationPageState extends State<locationPage> {
           ),
 
           Positioned(
-            top: 340,
-            left: 69,
+            top: 345,
+            left: 50,
             child: Container(
               color: Colors.white,
               padding: EdgeInsets.only(

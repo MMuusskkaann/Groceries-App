@@ -37,7 +37,7 @@ class _LoginpageState extends State<Loginpage> {
             left: 30,
             child: Container(
               child: Text(
-                "Login",
+                "Loging",
                 style: TextStyle(
                   fontFamily: 'Gilroy',
                   fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class _LoginpageState extends State<Loginpage> {
           ),
 
           Positioned(
-            top: 270,
+            top: 275,
             left: 30,
             child: Container(
               child: Text(
@@ -136,7 +136,7 @@ class _LoginpageState extends State<Loginpage> {
           ),
 
           Positioned(
-            top: 520,
+            top: 530,
             right: 30,
             child: Container(
               child: Text(
@@ -155,11 +155,11 @@ class _LoginpageState extends State<Loginpage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 350, //110
+                bottom: 265,
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
-                width: 395,
+                width: 370,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -194,7 +194,7 @@ class _LoginpageState extends State<Loginpage> {
 
           Positioned(
             top: 670,
-            right: 100,
+            right: 80,
             child: Container(
               child: Text(
                 "Don't have an account? Sign up",

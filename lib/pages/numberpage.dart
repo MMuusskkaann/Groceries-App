@@ -75,7 +75,7 @@ class _NumberpageState extends State<Numberpage> {
                       Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: Container(
-                          width: 405,
+                          width: 367,
                           child: IntlPhoneField(
                             initialCountryCode: 'IN',
                             showCountryFlag: true,
@@ -91,13 +91,13 @@ class _NumberpageState extends State<Numberpage> {
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Colors.grey,
-                                  width: 1.0,
+                                  // width: 1.0,
                                 ), // bottom line color
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Colors.grey,
-                                  width: 2.5,
+                                  // width: 1.5,
                                 ), // bottom line color on focus
                               ),
                             ),
