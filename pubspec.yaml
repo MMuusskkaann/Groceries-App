@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   pin_code: ^1.0.2
   pin_code_fields: ^8.0.1
+  country_state_city_picker: ^1.2.8
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
     - assets/images/maskgroup.png
     - assets/images/Rectangle.png
     - assets/images/location.png
+    - assets/images/carrot.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

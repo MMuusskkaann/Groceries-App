@@ -1,4 +1,6 @@
+import 'package:country_state_city_picker/country_state_city_picker.dart' show SelectState;
 import 'package:flutter/material.dart';
+import 'package:groceriesapp/pages/loginpage.dart';
 
 class locationPage extends StatefulWidget {
   const locationPage({super.key});
@@ -8,6 +10,10 @@ class locationPage extends StatefulWidget {
 }
 
 class _locationPageState extends State<locationPage> {
+  String? countryValue;
+  String? stateValue;
+  String? cityValue;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,7 +106,77 @@ class _locationPageState extends State<locationPage> {
               ),
             ),
           ),
-        ],
+
+
+          Positioned(
+            top: 490,
+            left: 40,   // left side  se margin
+            right: 40,
+            child: Column(
+              children: [
+                SelectState(
+                  onCountryChanged: (value) {
+                    setState(() {
+                      countryValue = value;
+                    });
+                  },
+                  onStateChanged:(value) {
+                    setState(() {
+                      stateValue = value;
+                    });
+                  },
+                  onCityChanged:(value) {
+                    setState(() {
+                      cityValue = value;
+                    });
+                  },
+
+                ),
+              ],
+            ),
+          ),
+      Align(
+        alignment: Alignment.bottomCenter,
+        child: Padding(
+          padding: EdgeInsets.only(
+            bottom: 110, //110
+          ), //this help to move button upward direction
+          child: SizedBox(
+            height: 65,
+            width: 370,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Loginpage(),
+                  ),
+                );
+              },
+
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF53B175),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  "Get Started",
+                  style: TextStyle(
+                    fontFamily: "Gilroy",
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                    height: 3,
+
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+      ],
       ),
     );
   }
