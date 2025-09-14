@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceriesapp/pages/homescreen.dart';
 
 class Signuppage extends StatefulWidget {
   const Signuppage({super.key});
@@ -213,7 +214,7 @@ class _SignuppageState extends State<Signuppage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Signuppage()),
+                      MaterialPageRoute(builder: (context) => Homescreen()),
                     );
                   },
 
@@ -221,8 +222,9 @@ class _SignuppageState extends State<Signuppage> {
                     backgroundColor: const Color(0xFF53B175),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(17),
                     ),
+                    
                   ),
                   child: Center(
                     child: Text(

@@ -83,13 +83,19 @@ class _SigninpageState extends State<Signinpage> {
                         counterText: '',
 
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey), // default border color
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                          ), // default border color
                         ),
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey), // bottom line color
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                          ), // bottom line color
                         ),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey), // bottom line color on focus
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                          ), // bottom line color on focus
                         ),
                       ),
                     ),
@@ -138,7 +144,7 @@ class _SigninpageState extends State<Signinpage> {
                             backgroundColor: Color(0xFF4285F4),
                             foregroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(17),
                             ),
                           ),
                           // icon: Icon(Icons.g),
@@ -188,7 +194,7 @@ class _SigninpageState extends State<Signinpage> {
                             backgroundColor: Color(0xFF1877F2),
                             foregroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(17),
                             ),
                           ),
                           child: Center(

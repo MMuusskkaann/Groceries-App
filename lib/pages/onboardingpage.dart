@@ -18,8 +18,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 492,//595
-          left: 175,//175
+          top: 495,//595
+          left: 177,//175
           child: Image.asset("assets/images/Group.png", height: 60, width: 60),
         ),
 
@@ -40,8 +40,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 632, //685
-          right: 82, //99
+          top: 630, //685
+          right: 84, //99
           child: Text(
             "to our store",
             style: TextStyle(
@@ -55,8 +55,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 700, //705
-          left: 60, //60
+          top: 695, //705
+          left: 56, //60
           // height: 15,
           child: Text(
             "Get your groceries in as fast as one hour",
@@ -75,7 +75,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
           alignment: Alignment.bottomCenter,
           child: Padding(
             padding: EdgeInsets.only(
-              bottom: 100, //110
+              bottom: 95, //110
             ), //this help to move button upward direction
             child: SizedBox(
               height: 65,
@@ -92,7 +92,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
                   backgroundColor: const Color(0xFF53B175),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(17),
                   ),
                 ),
                 child: Center(

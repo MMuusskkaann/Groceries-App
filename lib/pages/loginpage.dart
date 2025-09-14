@@ -155,7 +155,7 @@ class _LoginpageState extends State<Loginpage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 265,
+                bottom: 266,
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
@@ -172,7 +172,7 @@ class _LoginpageState extends State<Loginpage> {
                     backgroundColor: const Color(0xFF53B175),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(17),
                     ),
                   ),
                   child: Center(
@@ -194,7 +194,7 @@ class _LoginpageState extends State<Loginpage> {
 
           Positioned(
             top: 670,
-            right: 80,
+            right: 85,
             child: Container(
               child: Text(
                 "Don't have an account? Sign up",

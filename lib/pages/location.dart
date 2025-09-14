@@ -41,7 +41,7 @@ class _locationPageState extends State<locationPage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 140, left: 90),
+            padding: const EdgeInsets.only(top: 140, left: 110),
             child: SizedBox(
               child: Positioned(
                 top: 150,
@@ -55,7 +55,7 @@ class _locationPageState extends State<locationPage> {
 
           Positioned(
             top: 345,
-            left: 50,
+            left: 70,
             child: Container(
               color: Colors.white,
               padding: EdgeInsets.only(
@@ -157,7 +157,7 @@ class _locationPageState extends State<locationPage> {
                 backgroundColor: const Color(0xFF53B175),
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(17),
                 ),
               ),
               child: Center(
