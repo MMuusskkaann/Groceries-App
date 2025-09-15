@@ -131,7 +131,7 @@ class _SigninpageState extends State<Signinpage> {
                       ), //this help to move button upward direction
                       child: SizedBox(
                         height: 65,
-                        width: 375,
+                        width: 400,
                         child: ElevatedButton.icon(
                           onPressed: () {
                             // Navigator.push(
@@ -179,7 +179,7 @@ class _SigninpageState extends State<Signinpage> {
 
                       child: SizedBox(
                         height: 65,
-                        width: 375,
+                        width: 400,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
