@@ -183,7 +183,6 @@ class _LoginpageState extends State<Loginpage> {
                         fontWeight: FontWeight.w600,
                         fontSize: 20,
                         height: 3,
-
                       ),
                     ),
                   ),
@@ -195,17 +194,29 @@ class _LoginpageState extends State<Loginpage> {
           Positioned(
             top: 665,
             right: 85,
-            child: Container(
-              child: Text(
-                "Don't have an account? Sign up",
-                style: TextStyle(
-                  fontFamily: 'Gilroy',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17,
-                  color: Colors.black54,
-                  decoration: TextDecoration.none,
+            child: Row(
+              children: [
+                Text(
+                  "Don't have an account? ",
+                  style: TextStyle(
+                    fontFamily: 'Gilroy',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
+                    color: Colors.black87,
+                    decoration: TextDecoration.none,
+                  ),
                 ),
-              ),
+                Text(
+                  "Sign up",
+                  style: TextStyle(
+                    color: Color(0xFF53B175),
+                    fontFamily: 'Gilroy',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

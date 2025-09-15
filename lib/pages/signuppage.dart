@@ -170,34 +170,54 @@ class _SignuppageState extends State<Signuppage> {
           Positioned(
             top: 620,
             left: 30,
-            child: Container(
-              child: Text(
-                "By continuing you agree to our Terms of Service",
-                style: TextStyle(
+            child: Row(
+              children: [
+                Text(
+                  "By continuing you agree to our",
+                  style: TextStyle(
+                    fontFamily: 'Gilroy',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.grey,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+                Text(" Terms of Service", style: TextStyle(
+                  color: Color(0xFF53B175),
                   fontFamily: 'Gilroy',
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
-                  color: Colors.grey,
                   decoration: TextDecoration.none,
                 ),
-              ),
+                ),
+              ],
             ),
           ),
 
           Positioned(
             top: 645,
             left: 30,
-            child: Container(
-              child: Text(
-                "and Privacy Policy.",
-                style: TextStyle(
+            child: Row(
+              children: [
+                Text(
+                  "and ",
+                  style: TextStyle(
+                    fontFamily: 'Gilroy',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.grey,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+
+                Text("Privacy Policy.",style: TextStyle(
+                  color: Color(0xFF53B175),
                   fontFamily: 'Gilroy',
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
-                  color: Colors.grey,
                   decoration: TextDecoration.none,
-                ),
-              ),
+                ),),
+              ],
             ),
           ),
 
@@ -234,7 +254,6 @@ class _SignuppageState extends State<Signuppage> {
                         fontWeight: FontWeight.w600,
                         fontSize: 20,
                         height: 3,
-
                       ),
                     ),
                   ),
@@ -246,17 +265,29 @@ class _SignuppageState extends State<Signuppage> {
           Positioned(
             top: 785,
             left: 85,
-            child: Container(
-              child: Text(
-                "Already have an account ? Signup",
+            child: Row(
+              children: [
+                Text(
+                  "Already have an account ? ",
+                  style: TextStyle(
+                    fontFamily: 'Gilroy',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.black87,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+
+                Text("Sign up",
                 style: TextStyle(
+                  color: Color(0xFF53B175),
                   fontFamily: 'Gilroy',
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
-                  color: Colors.black87,
                   decoration: TextDecoration.none,
                 ),
-              ),
+                ),
+              ],
             ),
           ),
         ],
