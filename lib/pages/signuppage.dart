@@ -50,7 +50,7 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Positioned(
-            top: 290,
+            top: 270,
             left: 30,
             child: Container(
               child: Text(
@@ -67,7 +67,7 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30, top: 360),
+            padding: const EdgeInsets.only(left: 30, right: 30, top: 330),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -81,7 +81,7 @@ class _SignuppageState extends State<Signuppage> {
                     decoration: TextDecoration.none,
                   ),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 0),
                 TextField(
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
@@ -99,7 +99,7 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30, top: 460),
+            padding: const EdgeInsets.only(left: 30, right: 30, top: 430),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -113,7 +113,7 @@ class _SignuppageState extends State<Signuppage> {
                     decoration: TextDecoration.none,
                   ),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 0),
                 TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
@@ -131,7 +131,7 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30, top: 580),
+            padding: const EdgeInsets.only(left: 30, right: 30, top: 530),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -145,7 +145,7 @@ class _SignuppageState extends State<Signuppage> {
                     decoration: TextDecoration.none,
                   ),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 0),
                 TextField(
                   obscureText: _isObscure,
                   decoration: InputDecoration(
@@ -168,7 +168,7 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Positioned(
-            top: 672,
+            top: 620,
             left: 30,
             child: Container(
               child: Text(
@@ -185,7 +185,7 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Positioned(
-            top: 697,
+            top: 645,
             left: 30,
             child: Container(
               child: Text(
@@ -205,7 +205,7 @@ class _SignuppageState extends State<Signuppage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 110, //110
+                bottom: 150, //110
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
@@ -244,7 +244,7 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Positioned(
-            top: 820,
+            top: 785,
             left: 85,
             child: Container(
               child: Text(
