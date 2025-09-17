@@ -18,8 +18,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 540,//595
-          left: 195,//175
+          top: 500,//595
+          left: 174,//175
           child: Image.asset("assets/images/Group.png", height: 60, width: 60),
         ),
 
