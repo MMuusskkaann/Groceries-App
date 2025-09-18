@@ -14,7 +14,7 @@ class _HomescreenState extends State<Homescreen> {
       appBar: AppBar(
         toolbarHeight: 80,
         title: Padding(
-          padding: const EdgeInsets.only(top: 30,left: 132),
+          padding: const EdgeInsets.only(top: 30,left: 120),
           child: Image.asset(
             "assets/images/carrot.png",
              height: 45,
@@ -24,14 +24,12 @@ class _HomescreenState extends State<Homescreen> {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 2,left: 150),
-        child: Container(
-          child: Text("Dhaka,Banarase",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 19,
-            height: 2,
-          ),
-          ),
+        child: Text("Dhaka,Banarase",
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 19,
+          height: 2,
+        ),
         ),
       ),
     );
