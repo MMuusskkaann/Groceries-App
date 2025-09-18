@@ -14,7 +14,7 @@ class _HomescreenState extends State<Homescreen> {
       appBar: AppBar(
         toolbarHeight: 80,
         title: Padding(
-          padding: const EdgeInsets.only(top: 30,left: 120),
+          padding: const EdgeInsets.only(top: 30,left: 115),
           child: Image.asset(
             "assets/images/carrot.png",
              height: 45,
