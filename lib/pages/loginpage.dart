@@ -192,8 +192,8 @@ class _LoginpageState extends State<Loginpage> {
           ),
 
           Positioned(
-            top: 665,
-            right: 85,
+            top: 740,
+            right: 100,
             child: Row(
               children: [
                 Text(
