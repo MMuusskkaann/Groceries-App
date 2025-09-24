@@ -36,95 +36,75 @@ class _VerificationpageState extends State<Verificationpage> {
               },
             ),
           ),
+
           Padding(
-            padding: const EdgeInsets.only(top: 140),
+            padding: const EdgeInsets.only(top: 140, left: 25, right: 25),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Positioned(
-                  top: 40,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 25.0),
-                        child: Text(
-                          "Enter your 4-digit code",
-                          style: TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: "Gilroy",
-                            height: 3,
-                          ),
-                        ),
-                      ),
-
-                      Positioned(
-                        // top: 110,
-                        child: Container(
-                          padding: EdgeInsets.only(top: 0, left: 25.0),
-                          child: Text(
-                            "Code",
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: "Gilroy",
-                              color: Colors.grey,
-                              height: 2,
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 16.0),
-                        child: SizedBox(
-                          width: 400, // fixed width for whole OTP row
-                          child: PinCodeTextField(
-                            appContext: context,
-                            length: 4,
-                            keyboardType: TextInputType.number,
-                            animationType: AnimationType.none,
-                            pinTheme: PinTheme(
-                              shape: PinCodeFieldShape.underline,
-                              borderRadius: BorderRadius.zero,
-                              fieldHeight: 55,
-                              fieldWidth: 40, // width of each field
-                              activeColor: Colors.grey,
-                              inactiveColor: Colors.grey,
-                              selectedColor: Colors.grey,
-                            ),
-                            enableActiveFill: false,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            onChanged: (value) {
-                              print(value);
-                            },
-                            onCompleted: (value) {
-                              print("Completed: $value");
-
-                              // Show dialog box
-                              showDialog(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                  title: Text("OTP Entered"),
-                                  // content: Text("You entered: $value"),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.of(
-                                          context,
-                                        ).pop(); // close the dialog
-                                      },
-                                      child: Text("OK"),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
+                Text(
+                  "Enter your 4-digit code",
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: "Gilroy",
+                    height: 2,
                   ),
+                ),
+                Text(
+                  "Code",
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: "Gilroy",
+                    color: Colors.grey,
+                    height: 2,
+                  ),
+                ),
+                SizedBox(height: 20),
+
+                // OTP BOX FIELD (WhatsApp Style)
+                PinCodeTextField(
+                  appContext: context,
+                  length: 4,
+                  keyboardType: TextInputType.number,
+                  animationType: AnimationType.fade,
+                  pinTheme: PinTheme(
+                    shape: PinCodeFieldShape.box, // 👈 BOX STYLE
+                    borderRadius: BorderRadius.circular(10),
+                    fieldHeight: 55,
+                    fieldWidth: 50,
+                    activeColor: Colors.grey, // active border
+                    selectedColor: Colors.grey, // selected border
+                    inactiveColor: Colors.grey, // inactive border
+                    activeFillColor: Colors.white,
+                    selectedFillColor: Colors.white,
+                    inactiveFillColor: Colors.white,
+                  ),
+                  enableActiveFill: false,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  onChanged: (value) {
+                    print(value);
+                  },
+                  onCompleted: (value) {
+                    print("Completed: $value");
+
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: Text("OTP Entered"),
+                        content: Text("You entered: $value"),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text("OK"),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
@@ -132,19 +112,32 @@ class _VerificationpageState extends State<Verificationpage> {
         ],
       ),
 
+      // NEXT BUTTON
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(16.0),
         child: SizedBox(
           width: double.infinity,
           height: 50,
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.grey, // WhatsApp style button
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => locationPage()),
               );
             },
-            child: Text("Next"),
+            child: Text(
+              "Next",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
           ),
         ),
       ),
