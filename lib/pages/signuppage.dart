@@ -225,11 +225,11 @@ class _SignuppageState extends State<Signuppage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 150, //110
+                bottom: 230, //110
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
-                width: 365,
+                width: 390,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -263,8 +263,8 @@ class _SignuppageState extends State<Signuppage> {
           ),
 
           Positioned(
-            top: 785,
-            left: 85,
+            top: 790,
+            left: 105,
             child: Row(
               children: [
                 Text(
