@@ -1,4 +1,5 @@
-import 'package:country_state_city_picker/country_state_city_picker.dart' show SelectState;
+import 'package:country_state_city_picker/country_state_city_picker.dart'
+    show SelectState;
 import 'package:flutter/material.dart';
 import 'package:groceriesapp/pages/loginpage.dart';
 
@@ -41,7 +42,7 @@ class _locationPageState extends State<locationPage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 140, left: 110),
+            padding: const EdgeInsets.only(top: 140, left: 90),
             child: SizedBox(
               child: Positioned(
                 top: 150,
@@ -54,17 +55,12 @@ class _locationPageState extends State<locationPage> {
           ),
 
           Positioned(
-            top: 345,
-            left: 70,
+            top: 340,
+            left: 45,
             child: Container(
               color: Colors.white,
-              padding: EdgeInsets.only(
-                left: 2.0,
-                right: 10.0,
-                bottom: 0.0,
-              ),
+              padding: EdgeInsets.only(left: 2.0, right: 10.0, bottom: 0.0),
               child: Column(
-
                 children: [
                   Text(
                     "Select Your Location",
@@ -107,10 +103,25 @@ class _locationPageState extends State<locationPage> {
             ),
           ),
 
+          Positioned(
+            child: Padding(
+              padding: const EdgeInsets.only(left : 30.0, top: 475),
+              child: Text(
+                "Your Zone",
+                style: TextStyle(
+                  fontFamily: "Gilroy",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 15,
+                  color: Colors.grey,
+                  height: 3,
+                ),
+              ),
+            ),
+          ),
 
           Positioned(
-            top: 490,
-            left: 40,   // left side  se margin
+            top: 510,
+            left: 30, // left side  se margin
             right: 40,
             child: Column(
               children: [
@@ -120,63 +131,60 @@ class _locationPageState extends State<locationPage> {
                       countryValue = value;
                     });
                   },
-                  onStateChanged:(value) {
+                  onStateChanged: (value) {
                     setState(() {
                       stateValue = value;
                     });
                   },
-                  onCityChanged:(value) {
+                  onCityChanged: (value) {
                     setState(() {
                       cityValue = value;
                     });
                   },
-
                 ),
               ],
             ),
           ),
-      Align(
-        alignment: Alignment.bottomCenter,
-        child: Padding(
-          padding: EdgeInsets.only(
-            bottom: 110, //110
-          ), //this help to move button upward direction
-          child: SizedBox(
-            height: 65,
-            width: 370,
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Loginpage(),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.only(
+                bottom: 110, //110
+              ), //this help to move button upward direction
+              child: SizedBox(
+                height: 65,
+                width: 370,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Loginpage()),
+                    );
+                  },
+
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF53B175),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17),
+                    ),
                   ),
-                );
-              },
-
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF53B175),
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(17),
-                ),
-              ),
-              child: Center(
-                child: Text(
-                  "Get Started",
-                  style: TextStyle(
-                    fontFamily: "Gilroy",
-                    fontWeight: FontWeight.w600,
-                    fontSize: 20,
-                    height: 3,
-
+                  child: Center(
+                    child: Text(
+                      "Get Started",
+                      style: TextStyle(
+                        fontFamily: "Gilroy",
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                        height: 3,
+                      ),
+                    ),
                   ),
                 ),
               ),
             ),
           ),
-        ),
-      ),
-      ],
+        ],
       ),
     );
   }

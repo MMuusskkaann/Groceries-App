@@ -55,7 +55,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 690, //705
+          top: 695, //705
           left: 60, //60
           // height: 15,
           child: Text(
