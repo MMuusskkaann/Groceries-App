@@ -59,7 +59,7 @@ class _locationPageState extends State<locationPage> {
             left: 45,
             child: Container(
               color: Colors.white,
-              padding: EdgeInsets.only(left: 2.0, right: 10.0, bottom: 0.0),
+              padding: EdgeInsets.only(left: 3.0, right: 10.0, bottom: 0.0),
               child: Column(
                 children: [
                   Text(
