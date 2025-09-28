@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class cartPage extends StatefulWidget {
   const cartPage({super.key});
 
@@ -9,6 +10,10 @@ class cartPage extends StatefulWidget {
 class _cartPageState extends State<cartPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text('Cart Page coming soon...', style: TextStyle(fontSize: 20)),
+      ),
+    );
   }
 }

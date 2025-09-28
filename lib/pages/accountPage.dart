@@ -10,6 +10,13 @@ class accountPage extends StatefulWidget {
 class _accountPageState extends State<accountPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text(
+          "Account page coming soon...",
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
   }
 }

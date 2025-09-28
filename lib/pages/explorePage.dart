@@ -10,6 +10,14 @@ class explorePage extends StatefulWidget {
 class _explorePageState extends State<explorePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text("Explore Page coming soon...",
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+      ),
+    );
   }
 }
