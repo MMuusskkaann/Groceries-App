@@ -10,7 +10,7 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   int myIndex = 0;
   List<Widget> widgetList = const[
-    Text('Shop',style: TextStyle(fontSize: 40),),
+    // Text('Shop',style: TextStyle(fontSize: 40),),
     Text('Explore',style: TextStyle(fontSize: 40),),
     Text('Cart',style: TextStyle(fontSize: 40),),
     Text('Favourite',style: TextStyle(fontSize: 40),),
@@ -25,6 +25,10 @@ class _HomescreenState extends State<Homescreen> {
           padding: const EdgeInsets.only(top: 30, left: 105),
           child: Image.asset("assets/images/carrot.png", height: 45),
         ),
+      ),
+
+      body: Center(
+        child: widgetList[myIndex],
       ),
 
       bottomNavigationBar: BottomNavigationBar(
