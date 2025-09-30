@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:groceriesapp/pages/accountPage.dart';
+import 'package:groceriesapp/pages/cartPage.dart';
+import 'package:groceriesapp/pages/favouritePage.dart';
+
+import 'explorePage.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -10,26 +15,48 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   int myIndex = 0;
   List<Widget> widgetList = const[
-    // Text('Shop',style: TextStyle(fontSize: 40),),
-    Text('Explore',style: TextStyle(fontSize: 40),),
-    Text('Cart',style: TextStyle(fontSize: 40),),
-    Text('Favourite',style: TextStyle(fontSize: 40),),
-    Text('Account',style: TextStyle(fontSize: 40),),
+    explorePage(),
+    cartPage(),
+    favouritePage(),
+    accountPage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 80,
-        title: Padding(
-          padding: const EdgeInsets.only(top: 30, left: 105),
-          child: Image.asset("assets/images/carrot.png", height: 45),
-        ),
+      // appBar: AppBar(
+      //   toolbarHeight: 80,
+      //   title: Padding(
+      //     padding: const EdgeInsets.only(top: 30, left: 105),
+      //     child: Image.asset("assets/images/carrot.png", height: 45),
+      //   ),
+      // ),
+      body: IndexedStack(
+        index: myIndex,
+        children: [
+          // Tab 0 → Shop/Home
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  "Welcome to the Shop!",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 20),
+                Text("This is the home screen content for the Shop tab."),
+              ],
+            )
+          ),
+
+
+          explorePage(),
+          cartPage(),
+          favouritePage(),
+          accountPage(),
+
+        ],
       ),
 
-      body: Center(
-        child: widgetList[myIndex],
-      ),
 
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 38,
@@ -58,7 +85,7 @@ class _HomescreenState extends State<Homescreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart_outlined),
-            label: 'Explore',
+            label: 'Cart',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),

@@ -11,6 +11,14 @@ class _favouritePageState extends State<favouritePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Favourite",
+          style: TextStyle(fontSize: 20, color: Colors.black,fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
+
       body: Center(
         child: Text(
           "Favourite page coming soon...",
