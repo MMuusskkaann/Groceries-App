@@ -41,7 +41,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
 
         Positioned(
           top: 690, //685
-          right: 80, //99
+          right: 100, //99
           child: Text(
             "to our store",
             style: TextStyle(
@@ -55,8 +55,8 @@ class _OnboardingpageState extends State<Onboardingpage> {
         ),
 
         Positioned(
-          top: 695, //705
-          left: 60, //60
+          top: 760, //705
+          left: 75, //60
           // height: 15,
           child: Text(
             "Get your groceries in as fast as one hour",
@@ -75,7 +75,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
           alignment: Alignment.bottomCenter,
           child: Padding(
             padding: EdgeInsets.only(
-              bottom:100, //110
+              bottom:120, //110
             ), //this help to move button upward direction
             child: SizedBox(
               height: 65,
