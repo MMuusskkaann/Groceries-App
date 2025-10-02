@@ -155,7 +155,7 @@ class _LoginpageState extends State<Loginpage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 260,
+                bottom: 340,
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
@@ -192,7 +192,7 @@ class _LoginpageState extends State<Loginpage> {
           ),
 
           Positioned(
-            top: 670,
+            top: 600,
             right: 90,
             child: Row(
               children: [
