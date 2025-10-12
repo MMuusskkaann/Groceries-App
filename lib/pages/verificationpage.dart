@@ -120,7 +120,6 @@ class _VerificationpageState extends State<Verificationpage> {
           height: 50,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              // backgroundColor: Colors.grey, // WhatsApp style button
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),

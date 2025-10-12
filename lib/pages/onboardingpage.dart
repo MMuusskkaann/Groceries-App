@@ -103,7 +103,6 @@ class _OnboardingpageState extends State<Onboardingpage> {
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       height: 3,
-
                     ),
                   ),
                 ),

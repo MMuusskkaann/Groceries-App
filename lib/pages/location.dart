@@ -105,7 +105,7 @@ class _locationPageState extends State<locationPage> {
 
           Positioned(
             child: Padding(
-              padding: const EdgeInsets.only(left : 30.0, top: 475),
+              padding: const EdgeInsets.only(left : 30.0, top: 540),
               child: Text(
                 "Your Zone",
                 style: TextStyle(
@@ -120,7 +120,7 @@ class _locationPageState extends State<locationPage> {
           ),
 
           Positioned(
-            top: 510,
+            top: 585,
             left: 30, // left side  se margin
             right: 40,
             child: Column(
@@ -153,7 +153,7 @@ class _locationPageState extends State<locationPage> {
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
-                width: 370,
+                width: 390,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -163,6 +163,7 @@ class _locationPageState extends State<locationPage> {
                   },
 
                   style: ElevatedButton.styleFrom(
+
                     backgroundColor: const Color(0xFF53B175),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
