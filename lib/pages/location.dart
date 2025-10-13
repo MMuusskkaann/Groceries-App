@@ -42,7 +42,7 @@ class _locationPageState extends State<locationPage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 140, left: 105),
+            padding: const EdgeInsets.only(top: 140, left: 95),
             child: SizedBox(
               child: Positioned(
                 top: 150,
@@ -56,7 +56,7 @@ class _locationPageState extends State<locationPage> {
 
           Positioned(
             top: 340,
-            left: 60,
+            left: 55,
             child: Container(
               color: Colors.white,
               padding: EdgeInsets.only(left: 3.0, right: 10.0, bottom: 0.0),
@@ -73,7 +73,7 @@ class _locationPageState extends State<locationPage> {
                   ),
                   SizedBox(height: 5),
                   Padding(
-                    padding: const EdgeInsets.only(left: 5),
+                    padding: const EdgeInsets.only(left: 1),
                     child: Text(
                       "Switch on your location to stay in tune with",
                       style: TextStyle(
@@ -149,11 +149,11 @@ class _locationPageState extends State<locationPage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 110, //110
+                bottom: 70, //110
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
-                width: 390,
+                width: 370,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -172,7 +172,7 @@ class _locationPageState extends State<locationPage> {
                   ),
                   child: Center(
                     child: Text(
-                      "Get Started",
+                      "Submit",
                       style: TextStyle(
                         fontFamily: "Gilroy",
                         fontWeight: FontWeight.w600,
