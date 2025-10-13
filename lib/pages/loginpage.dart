@@ -155,11 +155,11 @@ class _LoginpageState extends State<Loginpage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 345,
+                bottom: 255,
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
-                width: 400,
+                width: 370,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -193,7 +193,7 @@ class _LoginpageState extends State<Loginpage> {
 
           Positioned(
             top: 680,
-            right: 110,
+            right: 88,
             child: Row(
               children: [
                 Text(

@@ -229,7 +229,7 @@ class _SignuppageState extends State<Signuppage> {
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
-                width: 400,
+                width: 380,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
