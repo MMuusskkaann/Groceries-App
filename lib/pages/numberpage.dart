@@ -75,7 +75,7 @@ class _NumberpageState extends State<Numberpage> {
                       Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: Container(
-                          width: 400,
+                          width: 365,
                           child: IntlPhoneField(
                             initialCountryCode: 'IN',
                             showCountryFlag: true,
