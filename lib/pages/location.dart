@@ -153,7 +153,7 @@ class _locationPageState extends State<locationPage> {
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
-                width: 370,
+                width: 390,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
