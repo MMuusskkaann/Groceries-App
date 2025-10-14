@@ -69,7 +69,7 @@ class _SigninpageState extends State<Signinpage> {
 
                   SizedBox(height: 20),
                   Container(
-                    width: 360,
+                    width: 388,
                     child: IntlPhoneField(
                       initialCountryCode: 'IN',
                       showDropdownIcon: false,
@@ -134,10 +134,6 @@ class _SigninpageState extends State<Signinpage> {
                         width: 400,
                         child: ElevatedButton.icon(
                           onPressed: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(builder: (context) => Signinpage()),
-                            // );
                           },
 
                           style: ElevatedButton.styleFrom(
