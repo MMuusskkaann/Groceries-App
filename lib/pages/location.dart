@@ -149,7 +149,7 @@ class _locationPageState extends State<locationPage> {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: EdgeInsets.only(
-                bottom: 70, //110
+                bottom: 130, //110
               ), //this help to move button upward direction
               child: SizedBox(
                 height: 65,
