@@ -79,7 +79,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
             ), //this help to move button upward direction
             child: SizedBox(
               height: 65,
-              width: 370,
+              width: 400,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
