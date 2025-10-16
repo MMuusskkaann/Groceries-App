@@ -76,7 +76,7 @@ class _OnboardingpageState extends State<Onboardingpage> {
           child: Padding(
             padding: EdgeInsets.only(
               bottom: 120, //110
-            ), //this help to move button upward direction
+            ), //this help button to move above
             child: SizedBox(
               height: 65,
               width: 400,
